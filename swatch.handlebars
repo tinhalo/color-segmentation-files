@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Properties Example</title>
+    <link rel="stylesheet" href="color_coding_semantic_segmentation.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(150px * 8);
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            /* Aligns items to the bottom */
+            box-sizing: border-box;
+            border: 1px solid #fff;
+        }
+
+        .box-text,
+        .color-name,
+        .color-context {
+            margin: 0;
+            /* Optional, remove default margins */
+        }
+
+        .color-name {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+
+        .color-context {
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {{#each context}}
+        <div class="box" style="background-color: {{this.colorCodeHex}}">
+            <div class="box-text">{{this.colorCodeHex}}</div>
+            {{#each this.contexts}}
+            {{this}}&nbsp;
+            {{/each}}
+            <div class="color-name">{{this.colorCodeName}}</div>
+        </div>
+        {{/each}}
+    </div>
+    <h3>Note: The name (distance) means it isn't *exactly* the name, but close-ish</h3>
+</body>
+
+</html>

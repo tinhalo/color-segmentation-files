@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Properties Example</title>
+    <link rel="stylesheet" href="color_coding_semantic_segmentation.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(150px * 8);
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            /* Aligns items to the bottom */
+            box-sizing: border-box;
+            border: 1px solid #fff;
+        }
+
+        .box-text,
+        .color-name,
+        .color-context {
+            margin: 0;
+            /* Optional, remove default margins */
+        }
+
+        .color-name {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+
+        .color-context {
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" style="background-color: #787878">
+            <div class="box-text">#787878</div>
+            wall&nbsp;
+            <div class="color-name">Westchester Grey (1.41 distance)</div>
+        </div>
+        <div class="box" style="background-color: #B47878">
+            <div class="box-text">#B47878</div>
+            building&nbsp;
+            edifice&nbsp;
+            <div class="color-name">Wild Party (5.48 distance)</div>
+        </div>
+        <div class="box" style="background-color: #06E6E6">
+            <div class="box-text">#06E6E6</div>
+            sky&nbsp;
+            <div class="color-name">Bright Turquoise (8.49 distance)</div>
+        </div>
+        <div class="box" style="background-color: #503232">
+            <div class="box-text">#503232</div>
+            floor&nbsp;
+            flooring&nbsp;
+            <div class="color-name">Decadent Chocolate (1.41 distance)</div>
+        </div>
+        <div class="box" style="background-color: #04C803">
+            <div class="box-text">#04C803</div>
+            tree&nbsp;
+            <div class="color-name">Demeter Green (4.58 distance)</div>
+        </div>
+        <div class="box" style="background-color: #787850">
+            <div class="box-text">#787850</div>
+            ceiling&nbsp;
+            <div class="color-name">Alexandrite Green (3.61 distance)</div>
+        </div>
+        <div class="box" style="background-color: #8C8C8C">
+            <div class="box-text">#8C8C8C</div>
+            road&nbsp;
+            route&nbsp;
+            <div class="color-name">More Than A Week (1.73 distance)</div>
+        </div>
+        <div class="box" style="background-color: #CC05FF">
+            <div class="box-text">#CC05FF</div>
+            bed&nbsp;
+            <div class="color-name">Vivid Orchid (5 distance)</div>
+        </div>
+        <div class="box" style="background-color: #E6E6E6">
+            <div class="box-text">#E6E6E6</div>
+            windowpane&nbsp;
+            window&nbsp;
+            <div class="color-name">Extraordinary Abundance of Tinge (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #04FA07">
+            <div class="box-text">#04FA07</div>
+            grass&nbsp;
+            <div class="color-name">EGA Green (5.83 distance)</div>
+        </div>
+        <div class="box" style="background-color: #E005FF">
+            <div class="box-text">#E005FF</div>
+            cabinet&nbsp;
+            <div class="color-name">Phlox (5.1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #EBFF07">
+            <div class="box-text">#EBFF07</div>
+            sidewalk&nbsp;
+            pavement&nbsp;
+            <div class="color-name">Sour Yellow (4.24 distance)</div>
+        </div>
+        <div class="box" style="background-color: #96053D">
+            <div class="box-text">#96053D</div>
+            person&nbsp;
+            individual&nbsp;
+            someone&nbsp;
+            somebody&nbsp;
+            mortal&nbsp;
+            soul&nbsp;
+            <div class="color-name">Pink Raspberry (8.83 distance)</div>
+        </div>
+        <div class="box" style="background-color: #787846">
+            <div class="box-text">#787846</div>
+            earth&nbsp;
+            ground&nbsp;
+            <div class="color-name">Gunmetal Green (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #08FF33">
+            <div class="box-text">#08FF33</div>
+            door&nbsp;
+            double&nbsp;
+            door&nbsp;
+            <div class="color-name">Lucent Lime (8 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0652">
+            <div class="box-text">#FF0652</div>
+            table&nbsp;
+            <div class="color-name">Hawaiian Raspberry (6.08 distance)</div>
+        </div>
+        <div class="box" style="background-color: #8FFF8C">
+            <div class="box-text">#8FFF8C</div>
+            mountain&nbsp;
+            mount&nbsp;
+            <div class="color-name">Cobalt Green (9.43 distance)</div>
+        </div>
+        <div class="box" style="background-color: #CCFF04">
+            <div class="box-text">#CCFF04</div>
+            plant&nbsp;
+            flora&nbsp;
+            plant&nbsp;
+            life&nbsp;
+            <div class="color-name">Fluorescent Yellow (2 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF3307">
+            <div class="box-text">#FF3307</div>
+            curtain&nbsp;
+            drape&nbsp;
+            drapery&nbsp;
+            mantle&nbsp;
+            pall&nbsp;
+            <div class="color-name">Electric Orange (4.47 distance)</div>
+        </div>
+        <div class="box" style="background-color: #CC4603">
+            <div class="box-text">#CC4603</div>
+            chair&nbsp;
+            <div class="color-name">Ōkaihau Express (3.16 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0066C8">
+            <div class="box-text">#0066C8</div>
+            car&nbsp;
+            auto&nbsp;
+            automobile&nbsp;
+            machine&nbsp;
+            motorcar&nbsp;
+            <div class="color-name">Royal Navy Blue (4 distance)</div>
+        </div>
+        <div class="box" style="background-color: #3DE6FA">
+            <div class="box-text">#3DE6FA</div>
+            water&nbsp;
+            <div class="color-name">Shimmering Expanse Cyan (9.06 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0633">
+            <div class="box-text">#FF0633</div>
+            painting&nbsp;
+            picture&nbsp;
+            <div class="color-name">Hornet Sting (6 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0B66FF">
+            <div class="box-text">#0B66FF</div>
+            sofa&nbsp;
+            couch&nbsp;
+            lounge&nbsp;
+            <div class="color-name">Heroic Blue (6 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0747">
+            <div class="box-text">#FF0747</div>
+            shelf&nbsp;
+            <div class="color-name">Cherry Soda (7.62 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF09E0">
+            <div class="box-text">#FF09E0</div>
+            house&nbsp;
+            <div class="color-name">Bright Magenta (8.06 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0907E6">
+            <div class="box-text">#0907E6</div>
+            sea&nbsp;
+            <div class="color-name">Pure Blue (9 distance)</div>
+        </div>
+        <div class="box" style="background-color: #DCDCDC">
+            <div class="box-text">#DCDCDC</div>
+            mirror&nbsp;
+            <div class="color-name">Gainsboro (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF095C">
+            <div class="box-text">#FF095C</div>
+            rug&nbsp;
+            carpet&nbsp;
+            carpeting&nbsp;
+            <div class="color-name">Flaming Hot Flamingoes (9.06 distance)</div>
+        </div>
+        <div class="box" style="background-color: #7009FF">
+            <div class="box-text">#7009FF</div>
+            field&nbsp;
+            <div class="color-name">Bright Indigo (9.11 distance)</div>
+        </div>
+        <div class="box" style="background-color: #08FFD6">
+            <div class="box-text">#08FFD6</div>
+            armchair&nbsp;
+            <div class="color-name">Ice Ice Baby (10.63 distance)</div>
+        </div>
+        <div class="box" style="background-color: #07FFE0">
+            <div class="box-text">#07FFE0</div>
+            seat&nbsp;
+            <div class="color-name">Ice Ice Baby (7.62 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFB806">
+            <div class="box-text">#FFB806</div>
+            fence&nbsp;
+            fencing&nbsp;
+            <div class="color-name">Fire Yellow (5.1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0AFF47">
+            <div class="box-text">#0AFF47</div>
+            desk&nbsp;
+            <div class="color-name">Radiant Hulk (15.52 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF290A">
+            <div class="box-text">#FF290A</div>
+            rock&nbsp;
+            stone&nbsp;
+            <div class="color-name">Red October (8.31 distance)</div>
+        </div>
+        <div class="box" style="background-color: #07FFFF">
+            <div class="box-text">#07FFFF</div>
+            wardrobe&nbsp;
+            closet&nbsp;
+            press&nbsp;
+            <div class="color-name">Aqua (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #E0FF08">
+            <div class="box-text">#E0FF08</div>
+            lamp&nbsp;
+            <div class="color-name">Dancing-Lady Orchid (8.06 distance)</div>
+        </div>
+        <div class="box" style="background-color: #6608FF">
+            <div class="box-text">#6608FF</div>
+            bathtub&nbsp;
+            bathing&nbsp;
+            tub&nbsp;
+            bath&nbsp;
+            tub&nbsp;
+            <div class="color-name">Electric Indigo (8 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF3D06">
+            <div class="box-text">#FF3D06</div>
+            railing&nbsp;
+            rail&nbsp;
+            <div class="color-name">Fire Opal (2.24 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFC207">
+            <div class="box-text">#FFC207</div>
+            cushion&nbsp;
+            <div class="color-name">Marigold (3.74 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF7A08">
+            <div class="box-text">#FF7A08</div>
+            base&nbsp;
+            pedestal&nbsp;
+            stand&nbsp;
+            <div class="color-name">Carrot Curl (4.12 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF14">
+            <div class="box-text">#00FF14</div>
+            box&nbsp;
+            <div class="color-name">So Sour (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0829">
+            <div class="box-text">#FF0829</div>
+            column&nbsp;
+            pillar&nbsp;
+            <div class="color-name">Ruddy (8.06 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0599">
+            <div class="box-text">#FF0599</div>
+            signboard&nbsp;
+            sign&nbsp;
+            <div class="color-name">Burning Raspberry (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0633FF">
+            <div class="box-text">#0633FF</div>
+            chest&nbsp;
+            of&nbsp;
+            drawers&nbsp;
+            chest&nbsp;
+            bureau&nbsp;
+            dresser&nbsp;
+            <div class="color-name">Nightly Escapade (2 distance)</div>
+        </div>
+        <div class="box" style="background-color: #EB0CFF">
+            <div class="box-text">#EB0CFF</div>
+            counter&nbsp;
+            <div class="color-name">Brusque Pink (12.37 distance)</div>
+        </div>
+        <div class="box" style="background-color: #A09614">
+            <div class="box-text">#A09614</div>
+            sand&nbsp;
+            <div class="color-name">Papyrus (8.19 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00A3FF">
+            <div class="box-text">#00A3FF</div>
+            sink&nbsp;
+            <div class="color-name">Protoss Pylon (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #8C8C8C">
+            <div class="box-text">#8C8C8C</div>
+            skyscraper&nbsp;
+            <div class="color-name">More Than A Week (1.73 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FA0A0F">
+            <div class="box-text">#FA0A0F</div>
+            fireplace&nbsp;
+            hearth&nbsp;
+            open&nbsp;
+            fireplace&nbsp;
+            <div class="color-name">Danger (6.48 distance)</div>
+        </div>
+        <div class="box" style="background-color: #14FF00">
+            <div class="box-text">#14FF00</div>
+            refrigerator&nbsp;
+            icebox&nbsp;
+            <div class="color-name">Phosphorescent Green (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #1FFF00">
+            <div class="box-text">#1FFF00</div>
+            grandstand&nbsp;
+            covered&nbsp;
+            stand&nbsp;
+            <div class="color-name">Green Screen (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF1F00">
+            <div class="box-text">#FF1F00</div>
+            path&nbsp;
+            <div class="color-name">RedЯum (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFE000">
+            <div class="box-text">#FFE000</div>
+            stairs&nbsp;
+            steps&nbsp;
+            <div class="color-name">Golden Yellow (1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #99FF00">
+            <div class="box-text">#99FF00</div>
+            runway&nbsp;
+            <div class="color-name">Greenday (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0000FF">
+            <div class="box-text">#0000FF</div>
+            case&nbsp;
+            display&nbsp;
+            case&nbsp;
+            showcase&nbsp;
+            vitrine&nbsp;
+            <div class="color-name">Blue (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF4700">
+            <div class="box-text">#FF4700</div>
+            pool&nbsp;
+            table&nbsp;
+            billiard&nbsp;
+            table&nbsp;
+            snooker&nbsp;
+            table&nbsp;
+            <div class="color-name">Red Dit (2 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00EBFF">
+            <div class="box-text">#00EBFF</div>
+            pillow&nbsp;
+            <div class="color-name">Whimsical Blue (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00ADFF">
+            <div class="box-text">#00ADFF</div>
+            screen&nbsp;
+            door&nbsp;
+            screen&nbsp;
+            <div class="color-name">Krishna Blue (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #1F00FF">
+            <div class="box-text">#1F00FF</div>
+            stairway&nbsp;
+            staircase&nbsp;
+            <div class="color-name">Blue Pencil (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0BC8C8">
+            <div class="box-text">#0BC8C8</div>
+            river&nbsp;
+            <div class="color-name">Cala Benirrás Blue (8.54 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF5200">
+            <div class="box-text">#FF5200</div>
+            bridge&nbsp;
+            span&nbsp;
+            <div class="color-name">Aerospace Orange (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FFF5">
+            <div class="box-text">#00FFF5</div>
+            bookcase&nbsp;
+            <div class="color-name">Turquoise Blue (6 distance)</div>
+        </div>
+        <div class="box" style="background-color: #003DFF">
+            <div class="box-text">#003DFF</div>
+            blind&nbsp;
+            screen&nbsp;
+            <div class="color-name">C64 Blue (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF70">
+            <div class="box-text">#00FF70</div>
+            coffee&nbsp;
+            table&nbsp;
+            cocktail&nbsp;
+            table&nbsp;
+            <div class="color-name">Booger Buster (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF85">
+            <div class="box-text">#00FF85</div>
+            toilet&nbsp;
+            can&nbsp;
+            commode&nbsp;
+            crapper&nbsp;
+            pot&nbsp;
+            potty&nbsp;
+            stool&nbsp;
+            throne&nbsp;
+            <div class="color-name">Guppie Green (6 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0000">
+            <div class="box-text">#FF0000</div>
+            flower&nbsp;
+            <div class="color-name">Red (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFA300">
+            <div class="box-text">#FFA300</div>
+            book&nbsp;
+            <div class="color-name">Pico Orange (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF6600">
+            <div class="box-text">#FF6600</div>
+            hill&nbsp;
+            <div class="color-name">Safety Orange (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #C2FF00">
+            <div class="box-text">#C2FF00</div>
+            bench&nbsp;
+            <div class="color-name">French Lime (2 distance)</div>
+        </div>
+        <div class="box" style="background-color: #008FFF">
+            <div class="box-text">#008FFF</div>
+            countertop&nbsp;
+            <div class="color-name">Starfleet Blue (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #33FF00">
+            <div class="box-text">#33FF00</div>
+            stove&nbsp;
+            kitchen&nbsp;
+            stove&nbsp;
+            range&nbsp;
+            kitchen&nbsp;
+            range&nbsp;
+            cooking&nbsp;
+            stove&nbsp;
+            <div class="color-name">Signal Green (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0052FF">
+            <div class="box-text">#0052FF</div>
+            palm&nbsp;
+            palm&nbsp;
+            tree&nbsp;
+            <div class="color-name">Nīlā Blue (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF29">
+            <div class="box-text">#00FF29</div>
+            kitchen&nbsp;
+            island&nbsp;
+            <div class="color-name">Cyber Neon Green (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FFAD">
+            <div class="box-text">#00FFAD</div>
+            computer&nbsp;
+            computing&nbsp;
+            machine&nbsp;
+            computing&nbsp;
+            device&nbsp;
+            data&nbsp;
+            processor&nbsp;
+            electronic&nbsp;
+            computer&nbsp;
+            information&nbsp;
+            processing&nbsp;
+            system&nbsp;
+            <div class="color-name">Enthusiasm (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0A00FF">
+            <div class="box-text">#0A00FF</div>
+            swivel&nbsp;
+            chair&nbsp;
+            <div class="color-name">Primary Blue (7.48 distance)</div>
+        </div>
+        <div class="box" style="background-color: #ADFF00">
+            <div class="box-text">#ADFF00</div>
+            boat&nbsp;
+            <div class="color-name">Lime Acid (2.24 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF99">
+            <div class="box-text">#00FF99</div>
+            bar&nbsp;
+            <div class="color-name">Green Gas (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF5C00">
+            <div class="box-text">#FF5C00</div>
+            arcade&nbsp;
+            machine&nbsp;
+            <div class="color-name">Maximum Orange (1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF00FF">
+            <div class="box-text">#FF00FF</div>
+            hovel&nbsp;
+            hut&nbsp;
+            hutch&nbsp;
+            shack&nbsp;
+            shanty&nbsp;
+            <div class="color-name">Magenta (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF00F5">
+            <div class="box-text">#FF00F5</div>
+            bus&nbsp;
+            autobus&nbsp;
+            coach&nbsp;
+            charabanc&nbsp;
+            double-decker&nbsp;
+            jitney&nbsp;
+            motorbus&nbsp;
+            motorcoach&nbsp;
+            omnibus&nbsp;
+            passenger&nbsp;
+            vehicle&nbsp;
+            <div class="color-name">Magenta (10 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0066">
+            <div class="box-text">#FF0066</div>
+            towel&nbsp;
+            <div class="color-name">Standby Led (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFAD00">
+            <div class="box-text">#FFAD00</div>
+            light&nbsp;
+            light&nbsp;
+            source&nbsp;
+            <div class="color-name">Fresh Squeezed (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0014">
+            <div class="box-text">#FF0014</div>
+            truck&nbsp;
+            motortruck&nbsp;
+            <div class="color-name">British Phone Booth (1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFB8B8">
+            <div class="box-text">#FFB8B8</div>
+            tower&nbsp;
+            <div class="color-name">Hard Candy (4.24 distance)</div>
+        </div>
+        <div class="box" style="background-color: #001FFF">
+            <div class="box-text">#001FFF</div>
+            chandelier&nbsp;
+            pendant&nbsp;
+            pendent&nbsp;
+            <div class="color-name">Is It Cold (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF3D">
+            <div class="box-text">#00FF3D</div>
+            awning&nbsp;
+            sunshade&nbsp;
+            sunblind&nbsp;
+            <div class="color-name">Lucent Lime (10 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0047FF">
+            <div class="box-text">#0047FF</div>
+            streetlight&nbsp;
+            street&nbsp;
+            lamp&nbsp;
+            <div class="color-name">Magic Ink (2.24 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF00CC">
+            <div class="box-text">#FF00CC</div>
+            booth&nbsp;
+            cubicle&nbsp;
+            stall&nbsp;
+            kiosk&nbsp;
+            <div class="color-name">Hot Magenta (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FFC2">
+            <div class="box-text">#00FFC2</div>
+            television&nbsp;
+            television&nbsp;
+            receiver&nbsp;
+            television&nbsp;
+            set&nbsp;
+            tv&nbsp;
+            tv&nbsp;
+            set&nbsp;
+            idiot&nbsp;
+            box&nbsp;
+            boob&nbsp;
+            tube&nbsp;
+            telly&nbsp;
+            goggle&nbsp;
+            box&nbsp;
+            <div class="color-name">Minty Paradise (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF52">
+            <div class="box-text">#00FF52</div>
+            airplane&nbsp;
+            aeroplane&nbsp;
+            plane&nbsp;
+            <div class="color-name">Cathode Green (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #000AFF">
+            <div class="box-text">#000AFF</div>
+            dirt&nbsp;
+            track&nbsp;
+            <div class="color-name">Icelandic Water (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0070FF">
+            <div class="box-text">#0070FF</div>
+            apparel&nbsp;
+            wearing&nbsp;
+            apparel&nbsp;
+            dress&nbsp;
+            clothes&nbsp;
+            <div class="color-name">Brandeis Blue (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #3300FF">
+            <div class="box-text">#3300FF</div>
+            pole&nbsp;
+            <div class="color-name">Electric Ultramarine (12 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00C2FF">
+            <div class="box-text">#00C2FF</div>
+            land&nbsp;
+            ground&nbsp;
+            soil&nbsp;
+            <div class="color-name">Capri (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #007AFF">
+            <div class="box-text">#007AFF</div>
+            bannister&nbsp;
+            banister&nbsp;
+            balustrade&nbsp;
+            balusters&nbsp;
+            handrail&nbsp;
+            <div class="color-name">Blue Sparkle (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FFA3">
+            <div class="box-text">#00FFA3</div>
+            escalator&nbsp;
+            moving&nbsp;
+            staircase&nbsp;
+            moving&nbsp;
+            stairway&nbsp;
+            <div class="color-name">Yíng Guāng Sè Green (5.83 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF9900">
+            <div class="box-text">#FF9900</div>
+            ottoman&nbsp;
+            pouf&nbsp;
+            pouffe&nbsp;
+            puff&nbsp;
+            hassock&nbsp;
+            <div class="color-name">Vitamin C (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF0A">
+            <div class="box-text">#00FF0A</div>
+            bottle&nbsp;
+            <div class="color-name">Lime on Steroides (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF7000">
+            <div class="box-text">#FF7000</div>
+            buffet&nbsp;
+            counter&nbsp;
+            sideboard&nbsp;
+            <div class="color-name">Flush Orange (1.41 distance)</div>
+        </div>
+        <div class="box" style="background-color: #8FFF00">
+            <div class="box-text">#8FFF00</div>
+            poster&nbsp;
+            posting&nbsp;
+            placard&nbsp;
+            notice&nbsp;
+            bill&nbsp;
+            card&nbsp;
+            <div class="color-name">Mochito (5.1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #5200FF">
+            <div class="box-text">#5200FF</div>
+            stage&nbsp;
+            <div class="color-name">Aladdin’s Feather (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #A3FF00">
+            <div class="box-text">#A3FF00</div>
+            van&nbsp;
+            <div class="color-name">Spring Bud (5 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFEB00">
+            <div class="box-text">#FFEB00</div>
+            ship&nbsp;
+            <div class="color-name">Middle Yellow (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #08B8AA">
+            <div class="box-text">#08B8AA</div>
+            fountain&nbsp;
+            <div class="color-name">Verditer (8.54 distance)</div>
+        </div>
+        <div class="box" style="background-color: #8500FF">
+            <div class="box-text">#8500FF</div>
+            conveyer&nbsp;
+            belt&nbsp;
+            conveyor&nbsp;
+            belt&nbsp;
+            conveyer&nbsp;
+            conveyor&nbsp;
+            transporter&nbsp;
+            <div class="color-name">Purple Climax (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FF5C">
+            <div class="box-text">#00FF5C</div>
+            canopy&nbsp;
+            <div class="color-name">Cathode Green (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #B800FF">
+            <div class="box-text">#B800FF</div>
+            washer&nbsp;
+            automatic&nbsp;
+            washer&nbsp;
+            washing&nbsp;
+            machine&nbsp;
+            <div class="color-name">The Grape War of 97’ (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF001F">
+            <div class="box-text">#FF001F</div>
+            plaything&nbsp;
+            toy&nbsp;
+            <div class="color-name">Incision (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00B8FF">
+            <div class="box-text">#00B8FF</div>
+            swimming&nbsp;
+            pool&nbsp;
+            swimming&nbsp;
+            bath&nbsp;
+            natatorium&nbsp;
+            <div class="color-name">Hawaii Morning (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00D6FF">
+            <div class="box-text">#00D6FF</div>
+            stool&nbsp;
+            <div class="color-name">Neon Blue (5 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF0070">
+            <div class="box-text">#FF0070</div>
+            barrel&nbsp;
+            cask&nbsp;
+            <div class="color-name">Retro Pink Pop (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #5CFF00">
+            <div class="box-text">#5CFF00</div>
+            basket&nbsp;
+            handbasket&nbsp;
+            <div class="color-name">Hyper Green (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00E0FF">
+            <div class="box-text">#00E0FF</div>
+            waterfall&nbsp;
+            falls&nbsp;
+            <div class="color-name">Neon Blue (8.06 distance)</div>
+        </div>
+        <div class="box" style="background-color: #70E0FF">
+            <div class="box-text">#70E0FF</div>
+            tent&nbsp;
+            collapsible&nbsp;
+            shelter&nbsp;
+            <div class="color-name">Athena Blue (10.44 distance)</div>
+        </div>
+        <div class="box" style="background-color: #46B8A0">
+            <div class="box-text">#46B8A0</div>
+            bag&nbsp;
+            <div class="color-name">Jolt of Jade (5.66 distance)</div>
+        </div>
+        <div class="box" style="background-color: #A300FF">
+            <div class="box-text">#A300FF</div>
+            minibike&nbsp;
+            motorbike&nbsp;
+            <div class="color-name">Vivid Violet (4 distance)</div>
+        </div>
+        <div class="box" style="background-color: #9900FF">
+            <div class="box-text">#9900FF</div>
+            cradle&nbsp;
+            <div class="color-name">Star Platinum Purple (4 distance)</div>
+        </div>
+        <div class="box" style="background-color: #47FF00">
+            <div class="box-text">#47FF00</div>
+            oven&nbsp;
+            <div class="color-name">Chlorophyll Green (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF00A3">
+            <div class="box-text">#FF00A3</div>
+            ball&nbsp;
+            <div class="color-name">Shocking Pink (2.45 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFCC00">
+            <div class="box-text">#FFCC00</div>
+            food&nbsp;
+            solid&nbsp;
+            food&nbsp;
+            <div class="color-name">USC Gold (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF008F">
+            <div class="box-text">#FF008F</div>
+            step&nbsp;
+            stair&nbsp;
+            <div class="color-name">Pink Panther (1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FFEB">
+            <div class="box-text">#00FFEB</div>
+            tank&nbsp;
+            storage&nbsp;
+            tank&nbsp;
+            <div class="color-name">Master Sword Blue (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #85FF00">
+            <div class="box-text">#85FF00</div>
+            trade&nbsp;
+            name&nbsp;
+            brand&nbsp;
+            name&nbsp;
+            brand&nbsp;
+            marque&nbsp;
+            <div class="color-name">Lasting Lime (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF00EB">
+            <div class="box-text">#FF00EB</div>
+            microwave&nbsp;
+            microwave&nbsp;
+            oven&nbsp;
+            <div class="color-name">Bright Magenta (8.54 distance)</div>
+        </div>
+        <div class="box" style="background-color: #F500FF">
+            <div class="box-text">#F500FF</div>
+            pot&nbsp;
+            flowerpot&nbsp;
+            <div class="color-name">Brusque Pink (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FF007A">
+            <div class="box-text">#FF007A</div>
+            animal&nbsp;
+            animate&nbsp;
+            being&nbsp;
+            beast&nbsp;
+            brute&nbsp;
+            creature&nbsp;
+            fauna&nbsp;
+            <div class="color-name">Guns N’ Roses (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFF500">
+            <div class="box-text">#FFF500</div>
+            bicycle&nbsp;
+            bike&nbsp;
+            wheel&nbsp;
+            cycle&nbsp;
+            <div class="color-name">Cadmium Yellow (1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0ABED4">
+            <div class="box-text">#0ABED4</div>
+            lake&nbsp;
+            <div class="color-name">Maldives (13.78 distance)</div>
+        </div>
+        <div class="box" style="background-color: #D6FF00">
+            <div class="box-text">#D6FF00</div>
+            dishwasher&nbsp;
+            dish&nbsp;
+            washer&nbsp;
+            dishwashing&nbsp;
+            machine&nbsp;
+            <div class="color-name">Bitter Lime (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00CCFF">
+            <div class="box-text">#00CCFF</div>
+            screen&nbsp;
+            silver&nbsp;
+            screen&nbsp;
+            projection&nbsp;
+            screen&nbsp;
+            <div class="color-name">Vivid Sky Blue (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #1400FF">
+            <div class="box-text">#1400FF</div>
+            blanket&nbsp;
+            cover&nbsp;
+            <div class="color-name">Royal Blue Tang (3.61 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFFF00">
+            <div class="box-text">#FFFF00</div>
+            sculpture&nbsp;
+            <div class="color-name">Yellow (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0099FF">
+            <div class="box-text">#0099FF</div>
+            hood&nbsp;
+            exhaust&nbsp;
+            hood&nbsp;
+            <div class="color-name">Sky of Magritte (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0029FF">
+            <div class="box-text">#0029FF</div>
+            sconce&nbsp;
+            <div class="color-name">Is It Cold (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FFCC">
+            <div class="box-text">#00FFCC</div>
+            vase&nbsp;
+            <div class="color-name">Plunge Pool (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #2900FF">
+            <div class="box-text">#2900FF</div>
+            traffic&nbsp;
+            light&nbsp;
+            traffic&nbsp;
+            signal&nbsp;
+            stoplight&nbsp;
+            <div class="color-name">Blue Pencil (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #29FF00">
+            <div class="box-text">#29FF00</div>
+            tray&nbsp;
+            <div class="color-name">Green Screen (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #AD00FF">
+            <div class="box-text">#AD00FF</div>
+            ashcan&nbsp;
+            trash&nbsp;
+            can&nbsp;
+            garbage&nbsp;
+            can&nbsp;
+            wastebin&nbsp;
+            ash&nbsp;
+            bin&nbsp;
+            ash-bin&nbsp;
+            ashbin&nbsp;
+            dustbin&nbsp;
+            trash&nbsp;
+            barrel&nbsp;
+            trash&nbsp;
+            bin&nbsp;
+            <div class="color-name">Digital Violets (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00F5FF">
+            <div class="box-text">#00F5FF</div>
+            fan&nbsp;
+            <div class="color-name">Agressive Aqua (6 distance)</div>
+        </div>
+        <div class="box" style="background-color: #4700FF">
+            <div class="box-text">#4700FF</div>
+            pier&nbsp;
+            wharf&nbsp;
+            wharfage&nbsp;
+            dock&nbsp;
+            <div class="color-name">Overdue Blue (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #7A00FF">
+            <div class="box-text">#7A00FF</div>
+            crt&nbsp;
+            screen&nbsp;
+            <div class="color-name">Violent Violet (5 distance)</div>
+        </div>
+        <div class="box" style="background-color: #00FFB8">
+            <div class="box-text">#00FFB8</div>
+            plate&nbsp;
+            <div class="color-name">Minty Paradise (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #005CFF">
+            <div class="box-text">#005CFF</div>
+            monitor&nbsp;
+            monitoring&nbsp;
+            device&nbsp;
+            <div class="color-name">Nīlā Blue (7 distance)</div>
+        </div>
+        <div class="box" style="background-color: #B8FF00">
+            <div class="box-text">#B8FF00</div>
+            bulletin&nbsp;
+            board&nbsp;
+            notice&nbsp;
+            board&nbsp;
+            <div class="color-name">Nuclear Blast (3 distance)</div>
+        </div>
+        <div class="box" style="background-color: #0085FF">
+            <div class="box-text">#0085FF</div>
+            shower&nbsp;
+            <div class="color-name">Bubble Bobble P2 (1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #FFD600">
+            <div class="box-text">#FFD600</div>
+            radiator&nbsp;
+            <div class="color-name">Gold (1 distance)</div>
+        </div>
+        <div class="box" style="background-color: #19C2C2">
+            <div class="box-text">#19C2C2</div>
+            glass&nbsp;
+            drinking&nbsp;
+            glass&nbsp;
+            <div class="color-name">Exquisite Turquoise (14.59 distance)</div>
+        </div>
+        <div class="box" style="background-color: #66FF00">
+            <div class="box-text">#66FF00</div>
+            clock&nbsp;
+            <div class="color-name">Bright Green (0 distance)</div>
+        </div>
+        <div class="box" style="background-color: #5C00FF">
+            <div class="box-text">#5C00FF</div>
+            flag&nbsp;
+            <div class="color-name">Aladdin’s Feather (7 distance)</div>
+        </div>
+    </div>
+    <h3>Note: The name (distance) means it isn't *exactly* the name, but close-ish</h3>
+</body>
+
+</html>
